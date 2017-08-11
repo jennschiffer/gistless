@@ -1,7 +1,7 @@
 gistless
 ===
 
-this goes through all the `.markdown` or `.md` files in a given directory and replaces and embedded gists with html including said gists' source code.
+this goes through all the `.markdown` or `.md` files in a given directory and replaces any embedded gists with html including said gists' source code.
 
 ### how to use
 
@@ -24,10 +24,12 @@ If you are working with files that aren't markdown, check out line 28. the if co
 2. if a script is found, a call to the github api is made to get the file name, language, and content of a gist
 3. html replaces the line where that script used to be, in the following format:
 
-`  <div class="code-snippet">
-     <p class="caption">filename.exe</p>
-     <pre lang="javascript"><code>GIST SOURCE CODE HERE</code></pre>
-   </div>`
+```
+<div class="code-snippet">
+  <p class="caption">filename.exe</p>
+  <pre lang="javascript"><code>GIST SOURCE CODE HERE</code></pre>
+</div>
+```
 
 ### why use this
 
